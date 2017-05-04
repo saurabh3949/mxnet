@@ -162,7 +162,7 @@ class ProgressBar(object):
         filled_len = int(round(self.bar_len * count / float(self.total)))
         percents = math.ceil(100.0 * count / float(self.total))
         prog_bar = '=' * filled_len + '-' * (self.bar_len - filled_len)
-        sys.stdout.write('[%s] %s%s\r' % (prog_bar, percents, '%'))
+        logging.info('[%s] %s%s\r' % (prog_bar, percents, '%'))
 
 
 class LogValidationMetricsCallback(object):
